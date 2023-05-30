@@ -1,0 +1,14 @@
+* {
+  font-family: Verdana, sans-serif;
+  border: pink 2px solid;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+html, body {
+  margin: 0;
+}
