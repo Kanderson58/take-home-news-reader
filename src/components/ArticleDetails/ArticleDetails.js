@@ -7,7 +7,7 @@ const ArticleDetails = ({selectedArticle}) => {
       <Link to='/'><button>To Home</button></Link>
       <p>{selectedArticle.title}</p>
       <p>{selectedArticle.publishedAt.substring(0, 10)}</p>
-      {selectedArticle.urlToImage ? <img src={selectedArticle.urlToImage} /> : <img src={require('../../dailypunctilio.png')} />}
+      {selectedArticle.urlToImage ? <img src={selectedArticle.urlToImage} alt={selectedArticle.title} /> : <img src={require('../../dailypunctilio.png')} alt={selectedArticle.title} />}
       <article>
         {selectedArticle.content}
       </article>

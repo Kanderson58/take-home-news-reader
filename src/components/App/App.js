@@ -17,7 +17,7 @@ const App = () => {
     // earliest date we can query: 2023-05-01
     
     setArticles(articlesSample.articles);
-  });
+  }, []);
 
   const articlesJSX = articles.map(article => <ArticlePreview key={article.title} article={article} setSelectedArticle={setSelectedArticle}/>)
 
