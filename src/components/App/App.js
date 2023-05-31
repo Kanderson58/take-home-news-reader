@@ -18,13 +18,8 @@ const App = () => {
     
     setArticles(articlesSample.articles);
   });
-  
-  const findArticle = (name) => {
-    const foundArticle = articles.find(article => article.title = name);
-    setSelectedArticle(foundArticle);
-  }
 
-  const articlesJSX = articles.map(article => <ArticlePreview key={article.title} article={article} findArticle={findArticle}/>)
+  const articlesJSX = articles.map(article => <ArticlePreview key={article.title} article={article} setSelectedArticle={setSelectedArticle}/>)
 
   return (
       <main>
@@ -34,7 +29,7 @@ const App = () => {
             <div className='articles'>{articlesJSX}</div>
           </Route>
           <Route exact path='/article'>
-            <ArticleDetails selectedArticle={selectedArticle}/>
+            <ArticleDetails selectedArticle={selectedArticle} />
           </Route>
         </Switch>
       </main>
