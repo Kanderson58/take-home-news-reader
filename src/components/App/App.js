@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import { articlesSample } from '../../sampleData';
 import ArticlePreview from '../ArticlePreview/ArticlePreview';
+import ArticleDetails from '../ArticleDetails/ArticleDetails'
 
 const App = () => {
   const [articles, setArticles] = useState([]);
@@ -33,6 +34,7 @@ const App = () => {
             <div className='articles'>{articlesJSX}</div>
           </Route>
           <Route exact path='/article'>
+            <ArticleDetails selectedArticle={selectedArticle}/>
           </Route>
         </Switch>
       </main>
