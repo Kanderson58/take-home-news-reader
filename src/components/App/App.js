@@ -6,17 +6,24 @@ import ArticlePreview from '../ArticlePreview/ArticlePreview';
 
 const App = () => {
   const [articles, setArticles] = useState([]);
-  const articlesJSX = articles.map(article => <ArticlePreview key={article.title} article={article} />)
-
+  const [selectedArticle, setSelectedArticle] = useState({});
+  
   useEffect(() => {
     // fetch('https://newsapi.org/v2/everything?domains=theonion.com&language=en&from=2023-05-15&apiKey=ff8bdb29da8e4d0cb221453f878971aa')
     //   .then(response => response.json())
     //   .then(data => console.log(data))
-      // required parameters : q, qInTitle, sources, or domains
-      // earliest date we can query: 2023-05-01
-
+    // required parameters : q, qInTitle, sources, or domains
+    // earliest date we can query: 2023-05-01
+    
     setArticles(articlesSample.articles);
-  })
+  });
+  
+  const findArticle = (name) => {
+    const foundArticle = articles.find(article => article.title = name);
+    setSelectedArticle(foundArticle);
+  }
+
+  const articlesJSX = articles.map(article => <ArticlePreview key={article.title} article={article} findArticle={findArticle}/>)
 
   return (
       <main>
