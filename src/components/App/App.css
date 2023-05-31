@@ -1,6 +1,5 @@
 * {
   font-family: Verdana, sans-serif;
-  border: pink 2px solid;
 }
 
 button {
@@ -11,4 +10,19 @@ button {
 
 html, body {
   margin: 0;
+}
+
+main:not(h1) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.articles {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
 }

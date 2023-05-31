@@ -1,30 +1,38 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { articlesSample } from '../../sampleData';
+import ArticlePreview from '../ArticlePreview/ArticlePreview';
 
 const App = () => {
   const [articles, setArticles] = useState([]);
-
-  const handleChange = () => {
-    // fetch('https://newsapi.org/v2/everything?domains=bbc.co.uk&language=en&from=2023-05-15&apiKey=ff8bdb29da8e4d0cb221453f878971aa')
+  const [selectedArticle, setSelectedArticle] = useState({});
+  
+  useEffect(() => {
+    // fetch('https://newsapi.org/v2/everything?domains=theonion.com&language=en&from=2023-05-15&apiKey=ff8bdb29da8e4d0cb221453f878971aa')
     //   .then(response => response.json())
     //   .then(data => console.log(data))
-      // required parameters : q, qInTitle, sources, or domains
-      // earliest date we can query: 2023-05-01
-
-    setArticles(articlesSample);
+    // required parameters : q, qInTitle, sources, or domains
+    // earliest date we can query: 2023-05-01
+    
+    setArticles(articlesSample.articles);
+  });
+  
+  const findArticle = (name) => {
+    const foundArticle = articles.find(article => article.title = name);
+    setSelectedArticle(foundArticle);
   }
+
+  const articlesJSX = articles.map(article => <ArticlePreview key={article.title} article={article} findArticle={findArticle}/>)
 
   return (
       <main>
-        {console.log(articles)}
+        <h1>The Daily Punctilio - All The News in Fits of Print</h1>
         <Switch>
           <Route exact path='/'>
-            <Link to='/article'><button>To Details</button></Link>
+            <div className='articles'>{articlesJSX}</div>
           </Route>
           <Route exact path='/article'>
-            <Link to='/'><button onClick={handleChange}>To Home</button></Link>
           </Route>
         </Switch>
       </main>
