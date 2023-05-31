@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import { articlesSample } from '../../sampleData';
 import ArticlePreview from '../ArticlePreview/ArticlePreview';
 import ArticleDetails from '../ArticleDetails/ArticleDetails'
@@ -23,7 +23,10 @@ const App = () => {
 
   return (
       <main>
-        <h1>The Daily Punctilio - All The News in Fits of Print</h1>
+        <Link to='/'>
+          {/* <h1 className='motto'>"ALL THE NEWS IN FITS OF PRINT!"</h1> */}
+          <img src={require('../../header.png')}/>
+        </Link>
         <Switch>
           <Route exact path='/'>
             <div className='articles'>{articlesJSX}</div>
