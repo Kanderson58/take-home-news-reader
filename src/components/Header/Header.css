@@ -1,12 +1,16 @@
-header {
+.full-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+header {
+  width: 90%;
+}
+
 .header {
-  height: 90px;
-  margin: 2% 5%;
+  height: 80px;
+  margin-bottom: 0;
 }
 
 .motto {
@@ -41,4 +45,13 @@ label {
 input {
   font-family: 'Newsreader', serif;
   width: 80%;
+}
+
+.subheader {
+  border: 1px solid black;
+  border-left: none;
+  border-right: none;
+  margin: 1% 0 2%;
+  display: flex;
+  justify-content: space-between;
 }
