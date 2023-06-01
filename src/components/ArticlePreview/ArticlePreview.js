@@ -5,7 +5,7 @@ const ArticlePreview = ({article, setSelectedArticle}) => {
   return (
     <div className='article-preview'>
       <h2>{article.title}</h2>
-      {article.description && <p>{article.description}</p>}
+      {article.description && <p className='description'>{article.description}</p>}
       <div>
         <div className='center'>
           {article.urlToImage ? <img className='article-img' src={article.urlToImage} alt={article.title} /> : <img className='article-img' src={require('../../dailypunctilio.png')} alt={article.title}/>}

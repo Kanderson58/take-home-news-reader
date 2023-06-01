@@ -18,7 +18,8 @@ const App = () => {
     //   .then(data => {
     //     setBadSearch(false);
     //     setArticles(data.articles)
-    //    })
+    //    }
+    // )
 
     setArticles(articlesSample.articles);
     setBadSearch(false);

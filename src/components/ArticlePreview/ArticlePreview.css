@@ -40,3 +40,75 @@ h2 {
   font-family: 'Newsreader', serif;
   margin-bottom: 0;
 }
+
+@media screen and (max-width: 1000px) {
+  .article-img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h2 {
+    font-size: 12pt;
+  }
+
+  p {
+    font-size: 8pt;
+  }
+
+  .article-img {
+    height: 100px;
+  }
+
+  .read-more {
+    font-size: 10pt;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .article-img {
+    width: 75px;
+    height: 75px;
+  }
+
+  h2 {
+    font-size: 10pt;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h2 {
+    font-size: 8pt;
+  }
+
+  p {
+    font-size: 6pt;
+  }
+
+  .read-more {
+    font-size: 8pt;
+  }
+
+  .date {
+    font-size: 6pt;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .description {
+    display: none;
+  }
+
+  h2 {
+    font-size: 6pt;
+  }
+
+  .article-img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .read-more {
+    font-size: 6pt
+  }
+}
