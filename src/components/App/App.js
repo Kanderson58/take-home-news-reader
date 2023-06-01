@@ -35,7 +35,7 @@ const App = () => {
           <Route exact path='/'>
             {filteredArticles === [] && !badSearch && <div className='articles'>{articlesJSX}</div>}
             {filteredArticles !== [] && !badSearch && <div className='articles'>{filteredArticlesJSX}</div>}
-            {badSearch && <p>Ope</p>}
+            {badSearch && <p>No results for that search term.</p>}
           </Route>
           <Route exact path='/article'>
             <ArticleDetails selectedArticle={selectedArticle} />

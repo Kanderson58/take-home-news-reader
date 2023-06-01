@@ -1,6 +1,6 @@
 import './Header.css';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = ({articles, setFilteredArticles, setBadSearch}) => {
   const [search, setSearch] = useState('');
@@ -32,10 +32,11 @@ const Header = ({articles, setFilteredArticles, setBadSearch}) => {
       <div className='full-header'>
         <h1 className='motto'>"ALL THE NEWS IN FITS OF PRINT!"</h1>
         <Link to='/'><img className='header' src={require('../../header.png')}/></Link>
-        <form>
+        {useLocation().pathname !== '/article' && <form>
           <label htmlFor='search'>Search</label>
           <input type='text' placeholder='Search...' id='search' onChange={(e) => setSearch(e.target.value)} />
-        </form>
+        </form>}
+        {useLocation().pathname !=='/' && <img src={require('../../countolaf.png')} className='motto olaf' />}
       </div>
       <div className='subheader'>
         <span>NEWS FOR TODAY</span>

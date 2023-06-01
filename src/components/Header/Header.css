@@ -55,3 +55,8 @@ input {
   display: flex;
   justify-content: space-between;
 }
+
+.olaf {
+  width: 75px;
+  padding: 0 3%;
+}
