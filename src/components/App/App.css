@@ -36,3 +36,9 @@ a {
 .header {
   margin: 2% 0;
 }
+
+@media screen and (max-width: 1000px) {
+  .articles {
+    gap: 10px 20px
+  }
+}

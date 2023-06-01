@@ -60,3 +60,72 @@ input {
   width: 75px;
   padding: 0 3%;
 }
+
+@media screen and (max-width: 1000px) {
+  .header {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .header {
+    height: 40px;
+  }
+
+  .subheader {
+    font-size: 8pt;
+  }
+
+  .motto {
+    font-size: 8pt;
+    height: 50px;
+  }
+
+  .olaf {
+    padding: 0;
+  }
+
+  form {
+    font-size: 8pt;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .motto {
+    display: none;
+  }
+
+  form {
+    width: 20%;
+    border: none;
+  }
+
+  label {
+    display: none;
+  }
+
+  .header {
+    height: 30px;
+  }
+
+  .subheader {
+    font-size: 7pt;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header {
+    height: 20px;
+  }
+
+  .subheader {
+    font-size: 6pt;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .subheader {
+    display: none;
+  }
+}
