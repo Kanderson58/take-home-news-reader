@@ -12,7 +12,8 @@ const App = () => {
   useEffect(() => {
     // fetch('https://newsapi.org/v2/everything?domains=theonion.com&language=en&from=2023-05-15&apiKey=ff8bdb29da8e4d0cb221453f878971aa')
     //   .then(response => response.json())
-    //   .then(data => console.log(data))
+    //   .then(data => {
+    //     setArticles(data.articles)})
     // required parameters : q, qInTitle, sources, or domains
     // earliest date we can query: 2023-05-01
     
@@ -25,7 +26,7 @@ const App = () => {
       <main>
         <Link to='/'>
           {/* <h1 className='motto'>"ALL THE NEWS IN FITS OF PRINT!"</h1> */}
-          <img src={require('../../header.png')}/>
+          <img className='header' src={require('../../header.png')}/>
         </Link>
         <Switch>
           <Route exact path='/'>

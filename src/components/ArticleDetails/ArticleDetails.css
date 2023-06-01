@@ -4,9 +4,12 @@
 }
 
 .full-img {
-  height: 500px;
+  height: 400px;
   width: 400px;
   object-fit: cover;
+}
+
+img {
   filter: grayscale(100%)
 }
 
@@ -15,24 +18,11 @@
 }
 
 .article {
-  width: 60%;
+  width: 50%;
   line-height: 2;
   height: 650px;
-  overflow-y: scroll;
   padding-right: 1%;
-}
-
-.article::-webkit-scrollbar {
-  width: .7em;
-}
-
-.article::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
-.article::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+  text-align: justify;
 }
 
 .title {
