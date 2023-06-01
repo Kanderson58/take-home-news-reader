@@ -81,6 +81,10 @@ input {
     height: 50px;
   }
 
+  .olaf {
+    padding: 0;
+  }
+
   form {
     font-size: 8pt;
     height: 50px;
