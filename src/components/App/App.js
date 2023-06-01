@@ -13,15 +13,15 @@ const App = () => {
   const [badSearch, setBadSearch] = useState(false);
   
   useEffect(() => {
-    // fetch('https://newsapi.org/v2/everything?domains=theonion.com&language=en&from=2023-05-15&apiKey=ff8bdb29da8e4d0cb221453f878971aa')
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     setBadSearch(false);
-    //     setArticles(data.articles)
-    //    })
+    fetch('https://newsapi.org/v2/everything?domains=theonion.com&language=en&from=2023-05-15&apiKey=ff8bdb29da8e4d0cb221453f878971aa')
+      .then(response => response.json())
+      .then(data => {
+        setBadSearch(false);
+        setArticles(data.articles)
+       })
 
-    setArticles(articlesSample.articles);
-    setBadSearch(false);
+    // setArticles(articlesSample.articles);
+    // setBadSearch(false);
   }, []);
 
   const articlesJSX = articles.map(article => <ArticlePreview key={article.title} article={article} setSelectedArticle={setSelectedArticle}/>)
