@@ -19,6 +19,4 @@ Win:  Successfully produce a well-thought out React application within the time 
 
 # Contributors
 
-<img alt="Kara Anderson" width="100" src="https://avatars.githubusercontent.com/u/114871395?v=4"/>
-[![GitHub][github-shield]][github-kara]
-[![LinkedIn][linkedin-shield]][linkedin-kara]
+Kara Anderson - [GitHub](https://github.com/Kanderson58) - [LinkedIn](https://www.linkedin.com/in/kara-anderson8/)
