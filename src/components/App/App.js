@@ -19,8 +19,7 @@ const App = () => {
     //     setBadSearch(false);
     //     setArticles(data.articles)
     //    })
-    // required parameters : q, qInTitle, sources, or domains
-    // earliest date we can query: 2023-05-01
+
     setArticles(articlesSample.articles);
     setBadSearch(false);
   }, []);

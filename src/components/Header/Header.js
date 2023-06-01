@@ -10,6 +10,7 @@ const Header = ({articles, setFilteredArticles, setBadSearch}) => {
       setFilteredArticles([]);
     }
 
+    // eslint-disable-next-line
     const filteredArticles = articles.filter(article => {
       if(article.title.toLowerCase().includes(search.toLowerCase())) {
         return article
@@ -22,7 +23,7 @@ const Header = ({articles, setFilteredArticles, setBadSearch}) => {
     } else {
       setBadSearch(true);
     }
-  }, [search]);
+  }, [search, articles, setBadSearch, setFilteredArticles]);
 
 
   const day = new Date().toString().toUpperCase().split(' ');
@@ -31,12 +32,12 @@ const Header = ({articles, setFilteredArticles, setBadSearch}) => {
     <header>
       <div className='full-header'>
         <h1 className='motto'>"ALL THE NEWS IN FITS OF PRINT!"</h1>
-        <Link to='/'><img className='header' src={require('../../header.png')}/></Link>
+        <Link to='/'><img className='header' alt='The Daily Punctilio' src={require('../../header.png')}/></Link>
         {useLocation().pathname !== '/article' && <form>
           <label htmlFor='search'>Search</label>
           <input type='text' placeholder='Search...' id='search' onChange={(e) => setSearch(e.target.value)} />
         </form>}
-        {useLocation().pathname !=='/' && <img src={require('../../countolaf.png')} className='motto olaf' />}
+        {useLocation().pathname !=='/' && <img alt='count olaf' src={require('../../countolaf.png')} className='motto olaf' />}
       </div>
       <div className='subheader'>
         <span>NEWS FOR TODAY</span>
