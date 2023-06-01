@@ -1,0 +1,46 @@
+.article-details {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.full-img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+}
+
+img {
+  filter: grayscale(100%)
+}
+
+.full-img:hover {
+  filter: none;
+}
+
+.article {
+  width: 50%;
+  line-height: 2;
+  height: 650px;
+  padding-right: 1%;
+  text-align: justify;
+}
+
+.title {
+  font-family: 'Newsreader', serif;
+  font-weight: 900;
+  font-size: 25pt;
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  font-style: italic;
+  text-shadow: 2px 2px 5px gray;
+}
+
+.source {
+  text-decoration: underline;
+  font-size: 10pt;
+}
+
+article {
+  font-family: 'Times New Roman', Times, serif;
+}

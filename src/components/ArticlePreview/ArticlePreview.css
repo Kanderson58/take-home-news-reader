@@ -4,16 +4,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 5%;
 }
 
 .article-img {
-  height: 250px;
+  height: 200px;
   width: 250px;
   object-fit: cover;
   border: solid black 2px;
 }
 
-h2, .read-more {
+.read-more {
   font-size: 15pt;
 }
 
@@ -31,4 +32,9 @@ p {
 
 .center {
   text-align: center;
+}
+
+h2 {
+  font-family: 'Newsreader', serif;
+  margin-bottom: 0;
 }

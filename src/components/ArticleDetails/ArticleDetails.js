@@ -1,9 +1,17 @@
 import './ArticleDetails.css'
+import { Link } from 'react-router-dom';
 
-const ArticleDetails = () => {
+const ArticleDetails = ({selectedArticle}) => {
   return (
     <div className='article-details'>
-      <Link to='/'><button>To Home</button></Link>
+      {selectedArticle.urlToImage ? <img className='full-img' src={selectedArticle.urlToImage} alt={selectedArticle.title} /> : <img className='full-img' src={require('../../dailypunctilio.png')} alt={selectedArticle.title} />}
+      <div className='article'>
+        <p className='title'>{selectedArticle.title}</p>
+        <p className='date'>{selectedArticle.publishedAt.substring(0, 10)}</p>
+        <article>
+          {selectedArticle.content} <a className='source' href={`${selectedArticle.url}`}>Read The Full Article {selectedArticle.source.name ? `On ${selectedArticle.source.name}` : ''}</a>
+        </article>
+      </div>
     </div>
   )
 }

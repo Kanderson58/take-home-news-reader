@@ -4,7 +4,7 @@ export const articlesSample = {
   'articles': [
     {
       'author': "https://www.theguardian.com/profile/helen-sullivan",
-      'content': "If youre just joining us: Russia launched a fresh massive wave of attacks on Kyiv in the early hours of Tuesday and air defence systems were engaging incoming targets, city officials said, as air rai… [+21721 chars]",
+      'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices varius libero at placerat. Aliquam ut venenatis diam. Nulla mattis magna risus, eu malesuada sem elementum ac. Fusce sit amet tortor pharetra, luctus augue semper, cursus magna. Praesent ut nibh in massa tempus faucibus a eu lacus.",
       'description': "Russia launches drone strikes on Kyiv, hours after Monday’s day and night-time attacks",
       'publishedAt': "2023-05-30T02:26:15Z",
       'source': {'id': null, 'name': 'The Guardian'},
