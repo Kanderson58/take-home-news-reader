@@ -16,6 +16,8 @@
 
 .read-more {
   font-size: 15pt;
+  border: black solid 1px;
+  margin-bottom: 2%;
 }
 
 p {

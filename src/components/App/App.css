@@ -24,7 +24,7 @@ main:not(h1) {
   justify-content: center;
   width: 90%;
   display: grid;
-  gap: 50px;
+  gap: 20px 50px;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
