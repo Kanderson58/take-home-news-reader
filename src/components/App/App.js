@@ -3,11 +3,13 @@ import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
 import { articlesSample } from '../../sampleData';
 import ArticlePreview from '../ArticlePreview/ArticlePreview';
-import ArticleDetails from '../ArticleDetails/ArticleDetails'
+import ArticleDetails from '../ArticleDetails/ArticleDetails';
+import Header from '../Header/Header';
 
 const App = () => {
   const [articles, setArticles] = useState([]);
   const [selectedArticle, setSelectedArticle] = useState({});
+  const [search, setSearch] = useState('');
   
   useEffect(() => {
     // fetch('https://newsapi.org/v2/everything?domains=theonion.com&language=en&from=2023-05-15&apiKey=ff8bdb29da8e4d0cb221453f878971aa')
@@ -24,9 +26,9 @@ const App = () => {
 
   return (
       <main>
+        {console.log(search)}
         <Link to='/'>
-          {/* <h1 className='motto'>"ALL THE NEWS IN FITS OF PRINT!"</h1> */}
-          <img className='header' src={require('../../header.png')}/>
+          <Header setSearch={setSearch} />
         </Link>
         <Switch>
           <Route exact path='/'>
