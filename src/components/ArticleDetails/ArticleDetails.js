@@ -1,5 +1,4 @@
 import './ArticleDetails.css'
-import { Link } from 'react-router-dom';
 
 const ArticleDetails = ({selectedArticle}) => {
   return (
@@ -9,7 +8,7 @@ const ArticleDetails = ({selectedArticle}) => {
         <p className='title'>{selectedArticle.title}</p>
         <p className='date'>{selectedArticle.publishedAt.substring(0, 10)}</p>
         <article>
-          {selectedArticle.content} <a className='source' href={`${selectedArticle.url}`}>Read The Full Article {selectedArticle.source.name ? `On ${selectedArticle.source.name}` : ''}</a>
+          {selectedArticle.content ? selectedArticle.content.split('[')[0] : null} <a className='source' href={`${selectedArticle.url}`}>Read The Full Article {selectedArticle.source.name ? `On ${selectedArticle.source.name}` : ''}</a>
         </article>
       </div>
     </div>

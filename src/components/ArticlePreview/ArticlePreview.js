@@ -1,6 +1,5 @@
 import './ArticlePreview.css'
 import { Link } from 'react-router-dom';
-import { extract } from '@extractus/article-extractor';
 
 const ArticlePreview = ({article, setSelectedArticle}) => {   
   return (

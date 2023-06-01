@@ -1,0 +1,62 @@
+.full-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  width: 90%;
+}
+
+.header {
+  height: 80px;
+  margin-bottom: 0;
+}
+
+.motto {
+  display: flex;
+  align-items: center;
+  font-family: 'Newsreader', serif;
+  font-weight: 900;
+  font-size: 10pt;
+  border: solid 1px black;
+  height: 70px;
+  width: 12%;
+  padding: 0 1%;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  font-size: 12pt;
+  height: 70px;
+  width: 12%;
+  padding: 0 1%;
+}
+
+label {
+  font-family: 'Newsreader', serif;
+}
+
+input {
+  font-family: 'Newsreader', serif;
+  width: 80%;
+}
+
+.subheader {
+  border: 1px solid black;
+  border-left: none;
+  border-right: none;
+  margin: 1% 0 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.olaf {
+  width: 75px;
+  padding: 0 3%;
+}
