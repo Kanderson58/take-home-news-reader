@@ -25,7 +25,6 @@ const Header = ({articles, setFilteredArticles, setBadSearch}) => {
     }
   }, [search, articles, setBadSearch, setFilteredArticles]);
 
-
   const day = new Date().toString().toUpperCase().split(' ');
 
   return (
